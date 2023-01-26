@@ -1,8 +1,9 @@
 // 예제 1
-let temp = 2 * (height + width);
+const perimeter = 2 * (height + width);
 console.log(temp);
-temp = height * width;
+const area = height * width;
 console.log(temp);
+// 의미있는 변수이름 변경
 
 // 예제 2
 function distanceTravelled(scenario, time) {
