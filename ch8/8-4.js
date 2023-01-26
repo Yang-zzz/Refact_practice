@@ -10,6 +10,7 @@ function listRecentPhotos(outStream, photos) {
     .forEach((p) => {
       outStream.write('<div>\n');
       emitPhotoData(outStream, p);
+      outStream.write(`<p>위치!: ${photo.location}</p>\n`); // 
       outStream.write('</div>\n');
     });
 }
@@ -17,7 +18,6 @@ function listRecentPhotos(outStream, photos) {
 function emitPhotoData(outStream, photo) {
   outStream.write(`<p>title: ${photo.title}</p>\n`);
   outStream.write(`<p>date: ${photo.date.toDateString()}</p>\n`);
-  outStream.write(`<p>location: ${photo.location}</p>\n`);
 }
 
 function renderPhoto(outStream, aPhoto) {
@@ -25,6 +25,6 @@ function renderPhoto(outStream, aPhoto) {
 }
 
 function recentDateCutoff() {
-  //7 days ago.
+  // 7 days ago.
   return new Date().setDate(new Date().getDate() - 7);
 }

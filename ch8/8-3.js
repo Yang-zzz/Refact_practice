@@ -8,13 +8,14 @@ export function renderPerson(person) {
 }
 
 export function photoDiv(p) {
-  return ['<div>', `<p>title: ${p.title}</p>`, emitPhotoData(p), '</div>'].join(
+  return ['<div>',emitPhotoData(photo), '</div>'].join(
     '\n'
   );
 }
 
 function emitPhotoData(aPhoto) {
   const result = [];
+  result.push( `<p>title: ${p.title}</p>`);
   result.push(`<p>location: ${aPhoto.location}</p>`);
   result.push(`<p>date: ${aPhoto.date.toDateString()}</p>`);
   return result.join('\n');
