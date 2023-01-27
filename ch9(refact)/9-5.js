@@ -1,6 +1,6 @@
 const customerRepository = new CustomerRepository();
 
-const oder = new Order(data.number, customerRepository.registerCustomer(data.custoerId);)
+const order = new Order(data.number, customerRepository.registerCustomer(data.custoerId));
 
 class Order {
   constructor(number, customer) {
